@@ -5,9 +5,17 @@ const A = [1, 5, 10, 15, 20, 25 ];
 console.log("1 - ", A);
 
 // 2 -
-const k = 2; //
-const B = A.map(n => n * k);
-console.log("2 - ", B); // multiplica todo o array por k
+const k = 2;
+
+function multArray(a, k) {
+  const final = [];
+  for (let number of a) {
+      final.push(number * k)
+  }
+  return final;
+}
+const B = multArray(A, k); // multiplica todo o array por k
+console.log("2 - ", B); 
 
 // 3 -
 const ultimoN = B.pop();
@@ -37,4 +45,7 @@ console.log("8 - ", pares); // faz um novo array com somente os numeros pares
 const indice = B.indexOf(2);
 console.log("9 - ", indice); // retorna o índice da segunda ocorrência do nuemro
 
-
+// 10 -
+const k = 2; 
+const B = A.map(n => n * k);
+console.log("10 - ", B);  //o map pega todo o array A e multiplica por k
